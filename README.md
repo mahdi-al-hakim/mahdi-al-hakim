@@ -87,8 +87,8 @@ mahdi.a.alhakim@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahdi-alhakim
 
 - **[WeSecure](https://github.com/mahdi-al-hakim/WeSecure)**, a boot-to-root Linux machine with a full
   writeup.
-- **Lebanese Universities CTF 2025** (Semicolon, around 260 teams): first in the national qualifying round,
-  three-person AUB team.
+- **Lebanese Universities CTF 2025** (Semicolon, around 260 teams): first place in the largest Lebanese national CTF,
+  three-person team.
 - **Hack The Box Ambassador, Beirut.** Co-founded HTB Beirut, run hands-on meetups and build original
   practice machines.
 - Designed and taught a 10-session AI security course for Semicolon. Co-organizer, mentor and trainer for
