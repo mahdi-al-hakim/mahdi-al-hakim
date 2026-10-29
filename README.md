@@ -1,6 +1,6 @@
 # Mahdi Alhakim
 
-Nearly everything I find is the same bug in a different system. A check reports success when it never
+A lot of what I find is the same bug in a different system. A check reports success when it never
 actually looked.
 
 A prompt-injection filter covered six of the seven methods that needed it. A fuzz harness opened the file
@@ -8,7 +8,7 @@ and closed it again without ever reading an attribute. An admin screen reported 
 went through. A safety probe passed green while the agent sent data out on every turn. Four different
 codebases, one failure: the thing meant to catch the problem could not have seen it.
 
-I look for that gap, report it to the vendor privately, and then write up what the test missed and how I
+I look for such gaps, report them to the vendor privately, and then write up what the test missed and how I
 proved it was missing. Software engineer in Beirut. I build MCP servers and agent tooling, and the security work is what I do
 with the rest of my time.
 
