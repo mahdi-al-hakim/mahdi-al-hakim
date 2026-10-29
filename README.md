@@ -20,18 +20,19 @@ mahdi.a.alhakim@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahdi-alhakim
 
 - **[One method of one tool: an incomplete content filter in github-mcp-server lockdown mode](https://mahdi-al-hakim.github.io/writeups/github-mcp-lockdown/)**.
   `pull_request_read` dispatches nine methods from one switch, and lockdown was added to them one at a time.
-  Seven return text written by repository users. Six got a check. The writeup covers the two-account rig
-  and the positive control I used to prove it at runtime instead of reading it off the source, why the
-  vendor's framing of lockdown as a best-effort filter rather than an authorization boundary is the right
-  one and mine was wrong, and five other things I got wrong in the report. Fixed in v1.10.0, Aug 2026.
+  Seven return text written by repository users. Six got a check. The writeup covers the two-account rig and
+  the positive control that proved it at runtime rather than from reading the source, and how the trust model
+  the vendor actually ships, a best-effort content filter and not an authorization boundary, decides what
+  counts as a gap at all. Fixed in v1.10.0, Aug 2026.
 - **[A one-byte differential in netcdf-c: integer overflow in classic-format length arithmetic](https://mahdi-al-hakim.github.io/writeups/netcdf-c/)**.
   netcdf-c runs on OSS-Fuzz, and the only harness it had opened a file and closed it without reading an
   attribute value. One byte of an 80-byte header undersizes a heap allocation while the un-wrapped element
-  count still drives the read loop. Includes the hypothesis that turned out to be wrong, and a claim I had
-  to retract in public. Reported Jul 2026, fix PR open.
-- **[Three reports to one vendor inside two weeks](https://mahdi-al-hakim.github.io/writeups/keycloak-caep/)**. Two were fixed and one was
-  reclassified as a hardening improvement. The writeup is mostly about what separated them, since I did not
-  predict which would be which.
+  count still drives the read loop. The writeup covers how the differential was isolated to one byte and why
+  the project's only fuzz harness could never reach it. Reported Jul 2026, fix PR open.
+- **[Three reports to one vendor inside two weeks](https://mahdi-al-hakim.github.io/writeups/keycloak-caep/)**.
+  All three were accepted, made public by Keycloak staff, and credited by name. One was fixed and backported,
+  one reclassified as an enhancement, one handled publicly as a hardening improvement. The writeup is about
+  what separated them, and about how to write a severity argument.
 
 ## Reported and fixed in other people's code
 
@@ -77,11 +78,11 @@ mahdi.a.alhakim@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahdi-alhakim
   4.5 scoring 1, 8, 9, 9, 9 across five runs and Opus 4.6 and Fable 5 scoring 1 and 1 across two each. That
   spread is worth re-running at fifty samples per model, which is the next step. No CI has run on the PR, so
   there is no failing build to read anything into.
-- **[controlarm](https://github.com/mahdi-al-hakim/controlarm)**, early. A red-team harness that keeps the
-  record of whether a run's positive control actually fired, so a run that proved nothing is filed as VOID
-  instead of as "no bug found". I ran it against a fair unguarded baseline and measured no effect at this
-  sample size: 1 of 6 against 0 of 6, two-sided Fisher exact p = 1.00. The README leads with that null
-  rather than burying it, and prices the eleven findings the design costs on one failure mode.
+- **[controlarm](https://github.com/mahdi-al-hakim/controlarm)**. A red-team harness built around
+  trustworthy negatives: it keeps the record of whether a run's positive control actually fired, so a run
+  that proved nothing is filed as VOID and not as "no bug found". Its prior-art gate is scored against 80
+  labelled items drawn from three public advisory corpora under a rule written before the corpus was built.
+  1,275 tests, and 180 guards each neutered in CI to prove a test catches its removal.
 
 ## CTF and teaching
 
