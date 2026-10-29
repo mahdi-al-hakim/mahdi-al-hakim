@@ -78,8 +78,8 @@ mahdi.a.alhakim@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahdi-alhakim
   4.5 scoring 1, 8, 9, 9, 9 across five runs and Opus 4.6 and Fable 5 scoring 1 and 1 across two each. That
   spread is worth re-running at fifty samples per model, which is the next step. No CI has run on the PR, so
   there is no failing build to read anything into.
-- **[controlarm](https://github.com/mahdi-al-hakim/controlarm)**. A red-team harness built around
-  trustworthy negatives: it keeps the record of whether a run's positive control actually fired, so a run
+- **[controlarm](https://github.com/mahdi-al-hakim/controlarm)**. The public core of a private harness I
+  run for vulnerability research, built around trustworthy negatives: it keeps the record of whether a run's positive control actually fired, so a run
   that proved nothing is filed as VOID and not as "no bug found". Its prior-art gate is scored against 80
   labelled items drawn from three public advisory corpora under a rule written before the corpus was built.
   1,275 tests, and 180 guards each neutered in CI to prove a test catches its removal.
@@ -92,5 +92,5 @@ mahdi.a.alhakim@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahdi-alhakim
   three-person team.
 - **Hack The Box Ambassador, Beirut.** Co-founded HTB Beirut, run hands-on meetups and build original
   practice machines.
-- Designed and taught a 10-session AI security course for Semicolon. Co-organizer, mentor and trainer for
+- Mentored and taught Semicolon's 10-session AI security course. Co-organizer, mentor and trainer for
   Lebanon CTF 2026.
