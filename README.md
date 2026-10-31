@@ -48,7 +48,7 @@ mahdi.a.alhakim@gmail.com | [LinkedIn](https://www.linkedin.com/in/mahdi-alhakim
   [#140](https://github.com/microsoft/RAMPART/issues/140) and then the fix: evaluators now return
   UNDETERMINED when they cannot see the evidence they are judging. Breaking change, +3701/-140 across 40
   files.
-- **Keycloak [#51376](https://github.com/keycloak/keycloak/issues/51376)** (CWE-613, Aug 2026). Revoking an
+- **Keycloak [#51376](https://github.com/keycloak/keycloak/issues/51376)** (Aug 2026). Revoking an
   OAuth2 token ended the session but sent no CAEP session-revoked event, which logout does send. Relying
   parties checking tokens offline kept accepting them until expiry. Fixed on `main` in Oct 2026
   ([PR #51386](https://github.com/keycloak/keycloak/pull/51386)). Not backported, so released versions still
