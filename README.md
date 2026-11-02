@@ -1,16 +1,18 @@
 # Mahdi Alhakim
 
-A lot of what I find is the same bug in a different system. A check reports success when it never
-actually looked.
+I found and fixed a false SAFE in Microsoft's agent-safety eval RAMPART: a safety test passed against an
+agent that exfiltrated data, because the evaluator could not observe the exfiltration (PR #141, merged,
+breaking change). Then I measured how often that happens: a text-only safety judge cleared 20 of 64 harmful
+agent transcripts, against 2 of 64 when it could see the tool calls.
 
-A prompt-injection filter covered six of the seven methods that needed it. A fuzz harness opened the file
-and closed it again without ever reading an attribute. An admin screen reported no access while the write
-went through. A safety probe passed green while the agent sent data out on every turn. Four different
-codebases, one failure: the thing meant to catch the problem could not have seen it.
+A lot of what I find has that shape: a check reports success when it never actually looked. A
+prompt-injection filter covered six of the seven methods that needed it. A fuzz harness opened the file and
+closed it again without ever reading an attribute. An admin screen reported no access while the write went
+through. The thing meant to catch the problem could not have seen it.
 
-I look for such gaps, report them to the vendor privately, and then write up what the test missed and how I
-proved it was missing. Software engineer in Beirut. I build MCP servers and agent tooling, and the security work is what I do
-with the rest of my time.
+I report these to the vendor privately, then write up what the test missed and how I proved it. Software
+engineer in Beirut. I build MCP servers and agent tooling, and the security work is what I do with the rest
+of my time.
 
 US citizen, no sponsorship needed. Open to relocating.
 
