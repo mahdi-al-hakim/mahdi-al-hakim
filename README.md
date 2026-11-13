@@ -15,9 +15,10 @@ agent tooling. Based in Beirut. US citizen, no sponsorship needed, open to reloc
   [netcdf-c](https://github.com/Unidata/netcdf-c/pull/3421).
 - [Warden](https://github.com/mahdi-al-hakim/warden) runs a Claude agent on IT offboarding under policy,
   approval, audit and revocation. In an eval on Claude Haiku, Sonnet and Opus 5.5, none of 30 live runs
-  proposed the extra write that an instruction planted in the data asked for.
+  acted on an extra write that an instruction planted in the data asked for. No arm made that write the
+  right call, so this doesn't show a model refusing it.
 - [controlarm](https://github.com/mahdi-al-hakim/controlarm) won't record a security test as negative until
-  a positive control has fired in the same run.
+  the same run shows the target answering and the plain version of the attack being refused.
 - Hack The Box Ambassador in Beirut. I built [WeSecure](https://github.com/mahdi-al-hakim/WeSecure), a
   boot-to-root machine with a full writeup.
 
