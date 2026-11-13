@@ -19,6 +19,10 @@ agent tooling. Based in Beirut. US citizen, no sponsorship needed, open to reloc
   right call, so this doesn't show a model refusing it.
 - [controlarm](https://github.com/mahdi-al-hakim/controlarm) won't record a security test as negative until
   the same run shows the target answering and the plain version of the attack being refused.
+- [malt-reward-hacking](https://github.com/mahdi-al-hakim/malt-reward-hacking): in METR's MALT dataset,
+  a check for one word finds 223 of the 224 runs labeled sabotage and none of the 6,047 normal ones,
+  because the agent names what it was told to do. So a monitor's score on that label can't show it
+  finds sabotage an agent keeps quiet about.
 - Hack The Box Ambassador in Beirut. I built [WeSecure](https://github.com/mahdi-al-hakim/WeSecure), a
   boot-to-root machine with a full writeup.
 
