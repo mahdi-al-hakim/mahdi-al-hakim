@@ -21,7 +21,8 @@ agent tooling. Based in Beirut. US citizen, no sponsorship needed, open to reloc
   the same run shows the target answering and the plain version of the attack being refused.
 - [malt-reward-hacking](https://github.com/mahdi-al-hakim/malt-reward-hacking): in METR's MALT dataset,
   a check for one word finds 223 of the 224 runs labeled sabotage and none of the 6,047 normal ones,
-  because the agent names what it was told to do. With those statements removed, in a pre-specified
+  because METR's edit leaves the agent stating its instructed intent. With those statements removed by
+  an LLM rewrite, in a pre-specified
   follow-up, a monitor reading only the agent's messages loses 0.186 AUROC, and one that also sees the
   actions about 0.09.
 - Hack The Box Ambassador in Beirut. I built [WeSecure](https://github.com/mahdi-al-hakim/WeSecure), a
